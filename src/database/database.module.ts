@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { BlogModel } from 'src/UserModel/BlogModel';
 // import { BlacklistModel } from 'src/UserModel/BlacklistedModel';
 import { UserModel } from 'src/UserModel/UserModel';
 
@@ -12,7 +13,7 @@ import { UserModel } from 'src/UserModel/UserModel';
             username:"root",
             password:"",
             database:"nest_blog",
-            models:[UserModel],
+            models:[BlogModel, UserModel],
             autoLoadModels:true,
             synchronize:true
         })
